@@ -1,0 +1,48 @@
+.open {
+    -webkit-transform-origin: 100% 50%;
+    -webkit-animation: openAnimation 1s both ease-in;
+}
+.close {
+    -webkit-transform-origin: 100% 50%;
+    -webkit-animation: closeAnimation 1s both ease-in;
+}
+@-webkit-keyframes openAnimation {
+      0% {
+            -webkit-transform: translateX(0px);
+      }
+      100% {
+            -webkit-transform: translateX(300px);
+      }
+}
+@-webkit-keyframes closeAnimation {
+      0% {
+        -webkit-transorm: translateX(300px);
+      }
+      100% {
+        -webkit-transform: translateX(0px);
+      }
+}
+
+.main-box{
+    margin-top: 20px;
+    display:grid ;
+    grid-template-columns: auto auto auto auto auto auto;
+    background-color: blue;
+    width: 100%;
+}
+.main-box div{
+    height: 400px;
+}
+.flatcard{
+    grid-column: 2/6;
+}
+.smallcard{
+    grid-column: span 3;
+}
+
+.projectcard:nth-of-type(even){
+    grid-column: 1/6;
+}
+.projectcard:nth-of-type(odd){
+    grid-column: 2/7;
+}
